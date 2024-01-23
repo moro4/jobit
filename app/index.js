@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { View, Text, ScrollView, SafeAreaView } from 'react-native';
 import { Stack, useRouter } from 'expo-router';
 import { COLORS, SIZES, icons, images } from '../constants';
-import { Nearbyjobs, Popularjobs, ScreenHeaderBtn, WelcomeScreen }
+import { Nearbyjobs, Popularjobs, ScreenHeaderBtn, Welcome, WelcomeScreen }
    from '../components';
 
 export default function Home() {
@@ -22,6 +22,13 @@ export default function Home() {
                headerTitle: ''
             }}
          />
+         <ScrollView showsVerticalScrollIndicator={false}>
+            <View style={{flex: 1, padding: SIZES.medium}}>
+               <Welcome />
+               <Popularjobs />
+               <Nearbyjobs />
+            </View>
+         </ScrollView>
       </SafeAreaView>
    )
 }
