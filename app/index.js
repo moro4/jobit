@@ -11,17 +11,19 @@ export default function Home() {
 
    return (
       <SafeAreaView style={{flex: 1, backgroundColor: COLORS.lightWhite}}>
+
          <Stack.Screen
             options={{
                headerStyle: {backgroundColor: COLORS.lightWhite},
                headerShadowVisible: false,
                headerLeft: () =>
-                  <ScreenHeaderBtn icon={icons.menu} dimension='60%'/>,
+                  <ScreenHeaderBtn iconUrl={icons.menu} dimension='60%'/>,
                headerRight: () =>
-                  <ScreenHeaderBtn icon={icons.profile} dimension='100%'/>,
+                  <ScreenHeaderBtn iconUrl={images.profile} dimension='100%'/>,
                headerTitle: ''
             }}
          />
+
          <ScrollView showsVerticalScrollIndicator={false}>
             <View style={{flex: 1, padding: SIZES.medium}}>
                <Welcome />
@@ -29,6 +31,7 @@ export default function Home() {
                <Nearbyjobs />
             </View>
          </ScrollView>
+
       </SafeAreaView>
    )
 }
