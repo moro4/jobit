@@ -9,6 +9,7 @@ const styles = StyleSheet.create({
     left: 0,
     right: 0,
     padding: SIZES.small,
+    paddingBottom: SIZES.xxLarge,
     backgroundColor: "#FFF",
     justifyContent: "space-between",
     alignItems: "center",
