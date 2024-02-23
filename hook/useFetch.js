@@ -11,6 +11,11 @@ export default function useFetch(endpoint, query) {
 
    const options = {
       method: 'GET',
+
+      // not best practice but easy and straightforward
+      // way of to mock the api server
+      // url: `http://192.168.2.154:3000/${endpoint}`,
+
       url: `https://jsearch.p.rapidapi.com/${endpoint}`,
       headers: {
          'X-RapidAPI-Key': rapid_api_key,
@@ -25,6 +30,7 @@ export default function useFetch(endpoint, query) {
 
       try {
          const response = await axios.request(options)
+         // setData(response.data);
          setData(response.data.data);
          setIsLoading(false);
       } catch (error) {
