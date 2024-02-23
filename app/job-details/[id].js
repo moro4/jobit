@@ -1,4 +1,4 @@
-import { useCallback, useState } from 'react';
+import { useState } from 'react';
 import {
    Text, View, SafeAreaView, ScrollView, ActivityIndicator, RefreshControl
 } from 'react-native';
@@ -23,9 +23,11 @@ export default function JobDetails() {
    );
    console.log('DATA FROM [ID]', data);
 
-   function onRefresh() {
-
-   }
+   const onRefresh = () => {
+      setRefreshing(true);
+      refetch();
+      setRefreshing(false);
+   };
 
    function displayTabContent() {
       switch (activeTab) {
