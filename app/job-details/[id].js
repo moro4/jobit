@@ -21,7 +21,6 @@ export default function JobDetails() {
    const { data, isLoading, isError, refetch } = useFetch(
       'job-details', { job_id: params.id }
    );
-   console.log('DATA FROM [ID]', data);
 
    const onRefresh = () => {
       setRefreshing(true);
